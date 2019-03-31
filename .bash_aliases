@@ -13,6 +13,13 @@ alias autoclean="sudo apt autoclean"
 
 alias up="cd .."
 alias upup="cd ../.."
+alias up2="cd ../.."
+alias up3="cd ../../.."
+alias up4="cd ../../../.."
+alias up5="cd ../../../../.."
+alias upll="cd ..;ls -la"
+alias upcl="cd ..;clear;ls"
+alias upcll="cd ..;clear;ls -la"
 
 alias restart="shutdown -r now"
 alias shutdown="shutdown now"
