@@ -6,6 +6,7 @@ syntax enable " enable syntax processing
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
+set shiftwidth=4 " indenting is 4 spaces
 
 " ***** UI CONFIG *****
 set ruler
@@ -20,6 +21,11 @@ set hlsearch " highlight matched
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " double press Esc to unhiglight search
 
+" ***** USEFUL REMAPS *****
+map <F7> gg=G<C-o><C-o>
+" fixes indentation in whole file
+
 " ***** CUSTOM COMMANDS *****
-command Make !cc %:t
+command Make w | !gcc %:t
 command Run !./a.out
+command Makecurses w | !gcc %:t -lncurses
